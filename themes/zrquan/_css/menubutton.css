@@ -1,0 +1,72 @@
+/*可选中菜单按钮*/
+.edui-zrquan .edui-list .edui-bordereraser {
+    display: none;
+}
+
+.edui-zrquan .edui-listitem {
+    padding: 1px;
+    white-space: nowrap;
+}
+
+.edui-zrquan .edui-list .edui-state-hover {
+    position: relative;
+    background-color: #fff5d4;
+    border: 1px solid #dcac6c;
+    padding: 0;
+}
+
+.edui-zrquan .edui-for-fontfamily .edui-listitem-label {
+    min-width: 130px;
+    _width: 120px;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 5px;
+}
+.edui-zrquan .edui-for-insertcode .edui-listitem-label {
+    min-width: 120px;
+    _width: 120px;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 5px;
+}
+.edui-zrquan .edui-for-underline .edui-listitem-label {
+    min-width: 120px;
+    _width: 120px;
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+.edui-zrquan .edui-for-fontsize .edui-listitem-label {
+    min-width: 120px;
+    _width: 120px;
+    padding: 3px 5px;
+
+}
+
+.edui-zrquan .edui-for-paragraph .edui-listitem-label {
+    min-width: 200px;
+    _width: 200px;
+    padding: 2px 5px;
+}
+
+.edui-zrquan .edui-for-rowspacingtop .edui-listitem-label,
+.edui-zrquan .edui-for-rowspacingbottom .edui-listitem-label {
+    min-width: 53px;
+    _width: 53px;
+    padding: 2px 5px;
+}
+
+.edui-zrquan .edui-for-lineheight .edui-listitem-label {
+    min-width: 53px;
+    _width: 53px;
+    padding: 2px 5px;
+}
+
+.edui-zrquan .edui-for-customstyle .edui-listitem-label {
+    min-width: 200px;
+    _width: 200px;
+    width: 200px !important;
+    padding: 2px 5px;
+}
