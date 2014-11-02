@@ -11,24 +11,24 @@
     <script type="text/javascript">
         $(function(){
             var ue = UE.getEditor('myEditor');
-            $('#btn').click(function(){
-                //手动提交需要手动同步编辑器数据
-                ue.sync();
-                $('#form')[0].submit();
-            });
-            //--自动切换提交地址----
-            var version = ue.options.serverUrl || ue.options.imageUrl ||  "php",
-                    form=$('#form')[0];
-
-            if(version.match(/php/)){
-                form.action="./server/getContent.php";
-            }else if(version.match(/net/)){
-                form.action="./server/getContent.ashx";
-            }else if(version.match(/jsp/)){
-                form.action="./server/getContent.jsp";
-            }else if(version.match(/asp/)){
-                form.action="./server/getContent.asp";
-            }
+//            $('#btn').click(function(){
+//                //手动提交需要手动同步编辑器数据
+//                ue.sync();
+//                $('#form')[0].submit();
+//            });
+//            //--自动切换提交地址----
+//            var version = ue.options.serverUrl || ue.options.imageUrl ||  "php",
+//                    form=$('#form')[0];
+//
+//            if(version.match(/php/)){
+//                form.action="./server/getContent.php";
+//            }else if(version.match(/net/)){
+//                form.action="./server/getContent.ashx";
+//            }else if(version.match(/jsp/)){
+//                form.action="./server/getContent.jsp";
+//            }else if(version.match(/asp/)){
+//                form.action="./server/getContent.asp";
+//            }
 
         })
     </script>
@@ -38,7 +38,6 @@
     <script type="text/plain" id="myEditor" name="myEditor">
         <p class='init-content'>请输入内容...</p>
     </script>
-    <input type="button" id="btn" value="提交数据">
 </form>
 </body>
 </html>

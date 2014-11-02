@@ -2,36 +2,58 @@
 .edui-zrquan .edui-toolbar .edui-button .edui-icon,
 .edui-zrquan .edui-toolbar .edui-menubutton .edui-icon,
 .edui-zrquan .edui-toolbar .edui-splitbutton .edui-icon {
-    height: 20px !important;
-    width: 20px !important;
-    background-image: url(../images/icons.png);
-    background-image: url(../images/icons.gif) \9;
+    /*height: 20px !important;*/
+    /*width: 20px !important;*/
+    /*background-image: url(../images/icons.png);*/
+    /*background-image: url(../images/icons.gif) \9;*/
+    /*height: 20px !important;*/
+    /*width: 20px !important;*/
+    background-image: url(../images/sprites-zrquan.png);
+    height: 16px !important;
+    width: 16px !important;
 }
 
 .edui-zrquan .edui-toolbar .edui-button .edui-button-wrap {
-    padding: 1px;
     position: relative;
+    border: 1px solid #F6F9F9;
+    padding: 5px;
 }
 
 .edui-zrquan .edui-toolbar .edui-button .edui-state-hover .edui-button-wrap {
-    background-color: #fff5d4;
-    padding: 0;
-    border: 1px solid #dcac6c;
-}
-
-.edui-zrquan .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap {
-    background-color: #ffe69f;
-    padding: 0;
-    border: 1px solid #dcac6c;
+    /*background-color: #fff5d4;*/
+    /*border : 1px solid #D1D1D1;*/
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
+
+    border: 1px solid #C1C1C1;
+}
+
+.edui-zrquan .edui-toolbar .edui-button .edui-state-checked .edui-button-wrap {
+    /*background-color: #ffe69f;*/
+    /*padding: 0;*/
+    /*border: 1px solid #dcac6c;*/
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    border: 1px solid #C1C1C1;
+    background-color: #EBEBEB;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .edui-zrquan .edui-toolbar .edui-button .edui-state-active .edui-button-wrap {
-    background-color: #ffffff;
-    padding: 0;
-    border: 1px solid gray;
+    /*background-color: #ffffff;*/
+    /*padding: 0;*/
+    /*border: 1px solid gray;*/
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    border: 1px solid #C1C1C1;
+    background-color: #EBEBEB;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 .edui-zrquan .edui-toolbar .edui-state-disabled .edui-label {
     color: #ccc;

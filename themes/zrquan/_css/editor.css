@@ -1,5 +1,6 @@
 /*UI工具栏、编辑区域、底部*/
 .edui-zrquan .edui-editor {
+    font-family: "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
     border: 1px solid #e7e7e7;
     background-color: white;
     position: relative;
@@ -48,6 +49,9 @@
 
 .edui-zrquan .edui-editor-iframeholder {
     position: relative;
+    -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1) inset;
     /*for fix ie6 toolbarmsg under iframe bug. relative -> static */
     /*_position: static !important;*
 }
@@ -64,6 +68,33 @@
     /*width: 40%;*/
     /*float: left;*/
     /*overflow: hidden;*/
+}
+
+.edui-zrquan .edui-editor-bottomsubmitContainer {
+    height: 45px;
+    background: #f6f9f9;
+    border-top: 1px solid #e7e7e7;
+}
+
+.edui-zrquan .edui-editor-submitbtn {
+    float: right;
+    margin-top: 7px;
+    margin-right: 12px;
+    width: 66px;
+    height: 30px;
+    border-radius: 3px;
+    background: #ff9700;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9700), color-stop(100%, #dd8401));
+    background-image: -webkit-linear-gradient(top, #ff9700, #dd8401);
+    background-image: -moz-linear-gradient(top, #ff9700, #dd8401);
+    background-image: -o-linear-gradient(top, #ff9700, #dd8401);
+    background-image: linear-gradient(top, #ff9700, #dd8401);
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
 }
 
 .edui-zrquan .edui-editor-bottomContainer {

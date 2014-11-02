@@ -49,6 +49,15 @@
                     domUtils.on(editor.document, "click", countFn);
                     editor.ui.getDom('wordcount').innerHTML = editor.getLang("wordCountTip");
                 }
+                //显示按钮
+                if (editor.options.submitButton) {
+                    function sumitForm() {
+                        alert("提交到后台");
+//                        document.getElementById('form').submit()
+                    }
+                    domUtils.on(editor.ui.getDom('submitbtn'), "click", sumitForm);
+                    editor.ui.getDom('submitbtn').innerHTML = editor.getLang("submitTip");
+                }
                 editor.ui._scale();
                 if (editor.options.scaleEnabled) {
                     if (editor.autoHeightEnabled) {
@@ -62,6 +71,10 @@
                     editor.ui.getDom('elementpath').style.display = "none";
                     editor.ui.getDom('wordcount').style.display = "none";
                     editor.ui.getDom('scale').style.display = "none";
+                }
+
+                if (!editor.options.submitButton) {
+                    editor.ui.getDom('bottomsubmitbar').style.display = "none";
                 }
 
                 if (!editor.selection.isFocus())return;
@@ -408,6 +421,10 @@
                 '<div id="##_message_holder" class="%%-messageholder"></div>' +
                 '</div>' +
                 '<div id="##_iframeholder" class="%%-iframeholder">' +
+                '</div>' +
+                //提交按钮
+                '<div id=##_bottomsubmitbar class="%%-bottomsubmitContainer">' +
+                '<div id="##_submitbtn" class="%%-submitbtn"></div>' +
                 '</div>' +
                 //modify wdcount by matao
                 '<div id="##_bottombar" class="%%-bottomContainer"><table><tr>' +

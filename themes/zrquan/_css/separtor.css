@@ -1,8 +1,16 @@
 /*分隔线*/
 .edui-zrquan .edui-toolbar .edui-separator {
-    width: 2px;
-    height: 20px;
-    margin: 2px 4px 2px 3px;
-    background: url(../images/icons.png) -181px 0;
-    background: url(../images/icons.gif) -181px 0 \9;
+    /*width: 2px;*/
+    /*height: 20px;*/
+    /*margin: 2px 4px 2px 3px;*/
+    /*background: url(../images/icons.png) -181px 0;*/
+    /*background: url(../images/icons.gif) -181px 0 \9;*/
+    -webkit-user-select: none;
+    display: inline-block;
+    position: relative;
+    background-color: #C1C1C1;
+    width: 1px;
+    margin: 6px 6px;
+    height: 18px;
+    line-height: 18px;
 }

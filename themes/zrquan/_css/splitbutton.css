@@ -1,20 +1,21 @@
 /*splitbutton*/
 .edui-zrquan .edui-toolbar .edui-splitbutton-body .edui-arrow,
 .edui-zrquan .edui-toolbar .edui-menubutton-body .edui-arrow {
-    background: url(../images/icons.png) -741px 0;
-    _background: url(../images/icons.gif) -741px 0;
-    height: 20px;
+    background: url(../images/icons.png) -740px -2px;
+    _background: url(../images/icons.gif) -740px -2px;
+    height: 16px;
     width: 9px;
 }
 
 .edui-zrquan .edui-toolbar .edui-splitbutton .edui-splitbutton-body,
 .edui-zrquan .edui-toolbar .edui-menubutton .edui-menubutton-body {
-    padding: 1px;
+    padding: 5px;
+    border: 1px solid #F6F9F9;
 }
 
 .edui-zrquan .edui-toolbar .edui-splitborder {
     width: 1px;
-    height: 20px;
+    height: 16px;
 }
 
 .edui-zrquan .edui-toolbar .edui-state-hover .edui-splitborder {
@@ -34,23 +35,33 @@
 
 .edui-zrquan .edui-toolbar .edui-splitbutton .edui-state-hover .edui-splitbutton-body,
 .edui-zrquan .edui-toolbar .edui-menubutton .edui-state-hover .edui-menubutton-body {
-    background-color: #fff5d4;
-    border: 1px solid #dcac6c;
-    padding: 0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    border: 1px solid #C1C1C1;
 }
 
 .edui-zrquan .edui-toolbar .edui-splitbutton .edui-state-checked .edui-splitbutton-body,
 .edui-zrquan .edui-toolbar .edui-menubutton .edui-state-checked .edui-menubutton-body {
-    background-color: #FFE69F;
-    border: 1px solid #DCAC6C;
-    padding: 0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    border: 1px solid #C1C1C1;
+    background-color: #EBEBEB;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .edui-zrquan .edui-toolbar .edui-splitbutton .edui-state-active .edui-splitbutton-body,
 .edui-zrquan .edui-toolbar .edui-menubutton .edui-state-active .edui-menubutton-body {
-    background-color: #ffffff;
-    border: 1px solid gray;
-    padding: 0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    border: 1px solid #C1C1C1;
+    background-color: #EBEBEB;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .edui-zrquan .edui-state-disabled .edui-arrow {
@@ -60,9 +71,17 @@
 
 .edui-zrquan .edui-toolbar .edui-splitbutton .edui-state-opened .edui-splitbutton-body,
 .edui-zrquan .edui-toolbar .edui-menubutton .edui-state-opened .edui-menubutton-body {
-    background-color: white;
-    border: 1px solid gray;
-    padding: 0;
+    /*background-color: white;*/
+    /*border: 1px solid gray;*/
+    /*padding: 0;*/
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    border: 1px solid #C1C1C1;
+    background-color: #EBEBEB;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .edui-zrquan .edui-for-insertorderedlist .edui-bordereraser,
@@ -71,6 +90,7 @@
 .edui-zrquan .edui-for-rowspacingbottom .edui-bordereraser,
 .edui-zrquan .edui-for-insertunorderedlist .edui-bordereraser {
     background-color: white;
+    display: none;
 }
 
 /* 解决嵌套导致的图标问题 */
