@@ -33,18 +33,34 @@
         , serverUrl: URL + "php/controller.php"
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
+//        , toolbars: [[
+//            'fullscreen', 'source', '|', 'undo', 'redo', '|',
+//            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
+//            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+//            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+//            'directionalityltr', 'directionalityrtl', 'indent', '|',
+//            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
+//            'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
+//            'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', 'background', '|',
+//            'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
+//            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
+//            'print', 'preview', 'searchreplace', 'drafts', 'help'
+//        ]]
         , toolbars: [[
-            'fullscreen', 'source', '|', 'undo', 'redo', '|',
-            'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', '|',
-            'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
-            'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
-            'directionalityltr', 'directionalityrtl', 'indent', '|',
-            'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|', 'touppercase', 'tolowercase', '|',
-            'link', 'unlink', 'anchor', '|', 'imagenone', 'imageleft', 'imageright', 'imagecenter', '|',
-            'simpleupload', 'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'gmap', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', 'background', '|',
-            'horizontal', 'date', 'time', 'spechars', 'snapscreen', 'wordimage', '|',
-            'inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow', 'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', 'charts', '|',
-            'print', 'preview', 'searchreplace', 'drafts', 'help'
+            'fullscreen',
+            'bold',                             //粗体
+            'italic',                           //斜体
+            'underline',                        //下划线
+            '|',
+            'blockquote',                       //引用
+            'link',                             //超链接
+            'insertorderedlist',                //有序列表
+            'insertunorderedlist',              //无序列表
+            '|',
+            'insertimage',                      //插入图片
+            'attachment',                       //插入附件
+            '|',
+            'removeformat'                      //清除格式
         ]]
         //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
         //,labelMap:{
@@ -76,15 +92,15 @@
 
         //,initialContent:'欢迎使用ueditor!'    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
 
-        //,autoClearinitialContent:true //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
+        ,autoClearinitialContent:true //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
 
         //,focus:false //初始化时，是否让编辑器获得焦点true或false
 
         //如果自定义，最好给p标签如下的行高，要不输入中文时，会有跳动感
-        //,initialStyle:'p{line-height:1em}'//编辑器层级的基数,可以用来改变字体等
+        ,initialStyle:'p{line-height:22px}'//编辑器层级的基数,可以用来改变字体等
 
-        //,iframeJsUrl: '' //给编辑区域的iframe引入一个js文件
-        //,iframeCssUrl: URL + '/themes/iframe.css' //给编辑区域的iframe引入一个css文件
+//        ,iframeJsUrl: '' //给编辑区域的iframe引入一个js文件
+        ,iframeCssUrl: URL + 'themes/zrquan.iframe.css' //给编辑区域的iframe引入一个css文件
 
         //indentValue
         //首行缩进距离,默认是2em
@@ -108,7 +124,7 @@
         //,enablePasteUpload: true
 
         //启用图片拉伸缩放
-        //,imageScaleEnabled: true
+        ,imageScaleEnabled: true
 
         //,fullscreen : false //是否开启初始化时即全屏，默认关闭
 
@@ -236,8 +252,8 @@
         //    {tag:'span',name:'hi', label:'', style:'font-style:italic;font-weight:bold;color:rgb(51, 153, 204)'}
         //]
 
-        //打开右键菜单功能
-        //,enableContextMenu: true
+        //打开右键菜单功能  Todo: 根据需要开启右键菜单的功能
+        ,enableContextMenu: false
         //右键菜单的内容，可以参考plugins/contextmenu.js里边的默认菜单的例子，label留空支持国际化，否则以此配置为准
         //,contextMenu:[
         //    {
@@ -256,10 +272,10 @@
 
         //elementPathEnabled
         //是否启用元素路径，默认是显示
-        //,elementPathEnabled : true
+        ,elementPathEnabled : false
 
         //wordCount
-        //,wordCount:true          //是否开启字数统计
+        ,wordCount:false          //是否开启字数统计
         //,maximumWords:10000       //允许的最大字符数
         //字数统计提示，{#count}代表当前字数，{#leave}代表还可以输入多少字符数,留空支持多语言自动切换，否则按此配置显示
         //,wordCountMsg:''   //当前已输入 {#count} 个字符，您还可以输入{#leave} 个字符
