@@ -443,7 +443,7 @@
                 '<div id="##_bottombar" class="%%-bottomContainer"><table><tr>' +
 //                '<td id="##_elementpath" class="%%-bottombar"></td>' +
 //                '<td id="##_wordcount" class="%%-wordcount"></td>' +
-                '<td id="##_scale" class="%%-scale"><div class="%%-icon"></div></td>' +
+                '<td id="##_scale" class="%%-scale" style="display: none"><div class="%%-icon"></div></td>' +
                 '</tr></table></div>' +
                 '<div id="##_scalelayer"></div>' +
                 '</div>';
