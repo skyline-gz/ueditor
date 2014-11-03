@@ -252,8 +252,8 @@
         //    {tag:'span',name:'hi', label:'', style:'font-style:italic;font-weight:bold;color:rgb(51, 153, 204)'}
         //]
 
-        //打开右键菜单功能  Todo: 根据需要开启右键菜单的功能
-        ,enableContextMenu: false
+        //打开右键菜单功能
+        ,enableContextMenu: true
         //右键菜单的内容，可以参考plugins/contextmenu.js里边的默认菜单的例子，label留空支持国际化，否则以此配置为准
         //,contextMenu:[
         //    {
@@ -266,6 +266,19 @@
         //        }
         //    }
         //]
+        ,contextMenu: [
+            {
+                label:'',
+                cmdName:'selectall'},
+            {
+                label:'',
+                cmdName:'copy'
+            },
+            {
+                label:'',
+                cmdName:'paste'
+            }
+        ]
 
         //快捷菜单
         //,shortcutMenu:["fontfamily", "fontsize", "bold", "italic", "underline", "forecolor", "backcolor", "insertorderedlist", "insertunorderedlist"]
@@ -282,6 +295,7 @@
         //超出字数限制提示  留空支持多语言自动切换，否则按此配置显示
         //,wordOverFlowMsg:''    //<span style="color:red;">你输入的字符个数已经超出最大允许值，服务器可能会拒绝保存！</span>
 
+        //职人圈自定义属性，升级UEditor时需要覆盖此改动
         ,submitButton:true        //是否开启提交表单提交btn
         //tab
         //点击tab键时移动的距离,tabSize倍数，tabNode什么字符做为单位

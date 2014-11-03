@@ -49,11 +49,17 @@
                     domUtils.on(editor.document, "click", countFn);
                     editor.ui.getDom('wordcount').innerHTML = editor.getLang("wordCountTip");
                 }
-                //显示按钮
+                //初始化提交按钮
                 if (editor.options.submitButton) {
                     function sumitForm() {
-                        alert("提交到后台");
-//                        document.getElementById('form').submit()
+                        var form = domUtils.findParentByTagName(me.iframe,"form", false);
+                        if (form) {
+                            if (me.fireEvent("beforesubmit") === false) {
+                                return;
+                            }
+                            me.sync();
+                            form.submit();
+                        }
                     }
                     domUtils.on(editor.ui.getDom('submitbtn'), "click", sumitForm);
                     editor.ui.getDom('submitbtn').innerHTML = editor.getLang("submitTip");
