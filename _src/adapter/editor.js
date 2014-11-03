@@ -74,9 +74,15 @@
                     me.disableScale();
                 }
                 if (!editor.options.elementPathEnabled && !editor.options.wordCount && !editor.options.scaleEnabled) {
-                    editor.ui.getDom('elementpath').style.display = "none";
-                    editor.ui.getDom('wordcount').style.display = "none";
-                    editor.ui.getDom('scale').style.display = "none";
+                    if(editor.ui.getDom('elementpath')) {
+                        editor.ui.getDom('elementpath').style.display = "none";
+                    }
+                    if(editor.ui.getDom('wordcount')) {
+                        editor.ui.getDom('wordcount').style.display = "none";
+                    }
+                    if(editor.ui.getDom('scale')) {
+                        editor.ui.getDom('scale').style.display = "none";
+                    }
                 }
 
                 if (!editor.options.submitButton) {
@@ -433,12 +439,13 @@
                 '<div id="##_submitbtn" class="%%-submitbtn"></div>' +
                 '</div>' +
                 //modify wdcount by matao
-                '<div id="##_bottombar" class="%%-bottomContainer"><table><tr>' +
-                '<td id="##_elementpath" class="%%-bottombar"></td>' +
-                '<td id="##_wordcount" class="%%-wordcount"></td>' +
-                '<td id="##_scale" class="%%-scale"><div class="%%-icon"></div></td>' +
-                '</tr></table></div>' +
-                '<div id="##_scalelayer"></div>' +
+                //由于产品不开启字数统计和元素路径，因此不加载此部分div
+//                '<div id="##_bottombar" class="%%-bottomContainer"><table><tr>' +
+//                '<td id="##_elementpath" class="%%-bottombar"></td>' +
+//                '<td id="##_wordcount" class="%%-wordcount"></td>' +
+//                '<td id="##_scale" class="%%-scale"><div class="%%-icon"></div></td>' +
+//                '</tr></table></div>' +
+//                '<div id="##_scalelayer"></div>' +
                 '</div>';
         },
         showWordImageDialog:function () {
@@ -666,12 +673,13 @@
 
             this.enableScale = function () {
                 //trace:2868
-                if (editor.queryCommandState("source") == 1)    return;
+                if (!scale || editor.queryCommandState("source") == 1)    return;
                 scale.style.display = "";
                 this.scaleEnabled = true;
                 domUtils.on(scale, "mousedown", down);
             };
             this.disableScale = function () {
+                if (!scale) return;
                 scale.style.display = "none";
                 this.scaleEnabled = false;
                 domUtils.un(scale, "mousedown", down);
