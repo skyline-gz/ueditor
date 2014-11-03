@@ -440,12 +440,12 @@
                 '</div>' +
                 //modify wdcount by matao
                 //由于产品不开启字数统计和元素路径，因此不加载此部分div
-//                '<div id="##_bottombar" class="%%-bottomContainer"><table><tr>' +
+                '<div id="##_bottombar" class="%%-bottomContainer"><table><tr>' +
 //                '<td id="##_elementpath" class="%%-bottombar"></td>' +
 //                '<td id="##_wordcount" class="%%-wordcount"></td>' +
-//                '<td id="##_scale" class="%%-scale"><div class="%%-icon"></div></td>' +
-//                '</tr></table></div>' +
-//                '<div id="##_scalelayer"></div>' +
+                '<td id="##_scale" class="%%-scale"><div class="%%-icon"></div></td>' +
+                '</tr></table></div>' +
+                '<div id="##_scalelayer"></div>' +
                 '</div>';
         },
         showWordImageDialog:function () {
