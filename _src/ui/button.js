@@ -33,9 +33,11 @@
         },
         getHtmlTpl: function (){
             return '<div id="##" class="edui-box %%">' +
-                '<div id="##_state" stateful>' +
-                 '<div class="%%-wrap"><div id="##_body" unselectable="on" ' + (this.title ? 'title="' + this.title + '"' : '') +
-                 ' class="%%-body" onmousedown="return $$._onMouseDown(event, this);" onclick="return $$._onClick(event, this);">' +
+                '<div id="##_state" stateful ' + (this.title ? 'title="' + this.title + '"' : '') +
+                ' class="%%-body" onmousedown="return $$._onMouseDown(event, this);" onclick="return $$._onClick(event, this);">' +
+                 '<div class="%%-wrap"><div id="##_body" unselectable="on">' +
+//                + (this.title ? 'title="' + this.title + '"' : '') +
+//                 ' class="%%-body" onmousedown="return $$._onMouseDown(event, this);" onclick="return $$._onClick(event, this);">' +
                   (this.showIcon ? '<div class="edui-box edui-icon"></div>' : '') +
                   (this.showText ? '<div class="edui-box edui-label">' + this.label + '</div>' : '') +
                  '</div>' +
