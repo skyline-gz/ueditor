@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 
             jsBasePath: '_src/',
             parseBasePath: '_parse/',
-            cssBasePath: 'themes/default/_css/',
+            cssBasePath: 'themes/zrquan/_css/',
 
             fetchScripts: function (readFile, basePath) {
 
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
             },
             css: {
                 src: Util.fetchStyles(),
-                dest: disDir + 'themes/default/css/ueditor.css'
+                dest: disDir + 'themes/zrquan/css/ueditor.css'
             }
         },
         cssmin: {
@@ -90,9 +90,9 @@ module.exports = function (grunt) {
             },
             files: {
                 expand: true,
-                cwd: disDir + 'themes/default/css/',
+                cwd: disDir + 'themes/zrquan/css/',
                 src: ['*.css', '!*.min.css'],
-                dest: disDir + 'themes/default/css/',
+                dest: disDir + 'themes/zrquan/css/',
                 ext: '.min.css'
             }
         },
@@ -117,7 +117,7 @@ module.exports = function (grunt) {
                 files: [
                     {
 
-                        src: [ '*.html', 'themes/iframe.css', 'themes/default/dialogbase.css', 'themes/default/images/**', 'dialogs/**', 'lang/**', 'third-party/**' ],
+                        src: [ '*.html', 'themes/zrquan.iframe.css', 'themes/zrquan/dialogbase.css', 'themes/zrquan/images/**', 'dialogs/**', 'lang/**', 'third-party/**' ],
                         dest: disDir
 
                     }
@@ -252,7 +252,7 @@ module.exports = function (grunt) {
 
     function updateConfigFile() {
 
-        var filename = 'ueditor.config.js',
+        var filename = 'zrquan.config.js',
             file = grunt.file.read(filename),
             path = server + "/",
             suffix = server === "net" ? ".ashx" : "." + server;
