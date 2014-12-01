@@ -12,6 +12,7 @@
 .edui-editor div{
     width:auto;
     height:auto;
+    line-height: 1;
 }
 .edui-zrquan .edui-editor-toolbarbox {
     position: relative;
@@ -44,7 +45,7 @@
 }
 
 .edui-zrquan .edui-editor-toolbarboxinner {
-    padding: 2px;
+    /*padding: 2px;*/
 }
 
 .edui-zrquan .edui-editor-iframeholder {
@@ -71,17 +72,18 @@
 }
 
 .edui-zrquan .edui-editor-bottomsubmitContainer {
-    height: 45px;
+    height: 38px;
     background: #f7f7f7;
     border-top: 1px solid #e5e5e5;
 }
 
 .edui-zrquan .edui-editor-submitbtn {
     float: right;
-    margin-top: 7px;
+    margin-top: 5px;
     margin-right: 12px;
-    width: 66px;
-    height: 30px;
+    width: 60px;
+    height: 28px;
+    line-height: 28px;
     border-radius: 3px;
     background: #ff9700;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff9700), color-stop(100%, #dd8401));
@@ -91,7 +93,6 @@
     background-image: linear-gradient(top, #ff9700, #dd8401);
     color: #ffffff;
     font-size: 14px;
-    line-height: 30px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
