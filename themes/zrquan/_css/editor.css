@@ -25,7 +25,7 @@
 }
 
 .edui-zrquan .edui-editor-toolbarboxouter {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #ccc;
     background-color: #f7f7f7;
     /*background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);*/
     /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));*/
@@ -74,7 +74,7 @@
 .edui-zrquan .edui-editor-bottomsubmitContainer {
     height: 38px;
     background: #f7f7f7;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #ccc;
 }
 
 .edui-zrquan .edui-editor-submitbtn {
