@@ -1,7 +1,7 @@
 /*UI工具栏、编辑区域、底部*/
 .edui-zrquan .edui-editor {
     font-family: "Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;
-    border: 1px solid #e7e7e7;
+    border: 1px solid #ccc;
     background-color: white;
     position: relative;
     overflow: visible;
