@@ -171,7 +171,8 @@
             me.top = e.screenY - (el.offsetHeight / 2) - me.SPACE;
 
             if (me.editor) {
-                el.style.zIndex = me.editor.container.style.zIndex * 1 + 10;
+                //el.style.zIndex = me.editor.container.style.zIndex * 1 + 10;
+                el.style.zIndex = 2000 + 10;
                 fixedlayer.style.zIndex = el.style.zIndex - 1;
             }
         } ,
