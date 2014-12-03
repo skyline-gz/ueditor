@@ -299,7 +299,7 @@
         ,submitButton:true         //是否开启提交表单提交btn
         ,onSubmitButtonClick: null //点击submit按钮的响应
         ,submitButtonTipKey: 'submitTip'   //提交按钮的tip设置，需在zh-cn.js中有定义
-        ,cancelButton:true         //是否开启cancel btn
+        ,cancelButton:false         //是否开启cancel btn
         ,onCancelButtonClick: null //点击cancel按钮的响应
 
         //tab
