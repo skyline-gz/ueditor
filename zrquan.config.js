@@ -97,7 +97,7 @@
         //,focus:false //初始化时，是否让编辑器获得焦点true或false
 
         //如果自定义，最好给p标签如下的行高，要不输入中文时，会有跳动感
-        ,initialStyle:'p{line-height:22px}'//编辑器层级的基数,可以用来改变字体等
+        ,initialStyle:'p{line-height:23px}'//编辑器层级的基数,可以用来改变字体等
 
 //        ,iframeJsUrl: '' //给编辑区域的iframe引入一个js文件
         ,iframeCssUrl: URL + 'themes/zrquan.iframe.css' //给编辑区域的iframe引入一个css文件
