@@ -24,6 +24,11 @@ UE.ajax = function() {
     }
     var creatAjaxRequest = new Function('return new ' + fnStr);
 
+    // Make sure that every Ajax request sends the CSRF token
+    var CSRFProtection = function(xhr) {
+        var token = $('meta[name="csrf-token"]').attr('content');
+        if (token) xhr.setRequestHeader('X-CSRF-Token', token);
+    };
 
     /**
      * 将json参数转化成适合ajax提交的参数列表
@@ -64,6 +69,8 @@ UE.ajax = function() {
                 onerror:function() {
                 }
             };
+
+        CSRFProtection(xhr);
 
         if (typeof url === "object") {
             ajaxOptions = url;
