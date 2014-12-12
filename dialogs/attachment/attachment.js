@@ -636,7 +636,8 @@
                     timeout: 100000,
                     data: utils.extend({
                             start: this.listIndex,
-                            size: this.listSize
+                            size: this.listSize,
+                            attach_type: 'Attachment'
                         }, editor.queryCommandValue('serverparam')),
                     method: 'get',
                     onsuccess: function (r) {
