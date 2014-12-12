@@ -688,7 +688,11 @@
                     } else {
                         var ic = document.createElement('i'),
                             textSpan = document.createElement('span');
-                        textSpan.innerHTML = list[i].url.substr(list[i].url.lastIndexOf('/') + 1);
+                        if (list[i].original) {
+                            textSpan.innerHTML = list[i].original;
+                        } else {
+                            textSpan.innerHTML = list[i].url.substr(list[i].url.lastIndexOf('/') + 1);
+                        }
                         preview = document.createElement('div');
                         preview.appendChild(ic);
                         preview.appendChild(textSpan);

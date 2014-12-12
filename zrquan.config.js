@@ -47,7 +47,7 @@
 //            'print', 'preview', 'searchreplace', 'drafts', 'help'
 //        ]]
         , toolbars: [[
-            'fullscreen',
+            //'fullscreen',
             'bold',                             //粗体
             'italic',                           //斜体
             'underline',                        //下划线
