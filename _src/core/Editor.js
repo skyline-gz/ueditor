@@ -832,7 +832,7 @@
          * editor.setContent('<p>new text</p>', true); //插入的结果是<p>old text</p><p>new text</p>
          * ```
          */
-        setContent: function (html, isAppendTo, notFireSelectionchange) {
+        setContent: function (html, isAppendTo, notFireSelectionchange, notFireContentChange) {
             var me = this;
 
             me.fireEvent('beforesetcontent', html);
@@ -879,7 +879,7 @@
                 }
             }
             me.fireEvent('aftersetcontent');
-            me.fireEvent('contentchange');
+            !notFireContentChange && me.fireEvent('contentchange');
 
             !notFireSelectionchange && me._selectionChange();
             //清除保存的选区
