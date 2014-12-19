@@ -72,6 +72,16 @@
                     var tipKey = editor.options.submitButtonTipKey ? editor.options.submitButtonTipKey : "submitTips";
                     editor.ui.getDom('submitbtn').innerHTML = editor.getLang(tipKey);
                 }
+                //初始化自动保存tips
+                if(editor.options.enableAutoSave) {
+                    editor.addListener('contentChange', function (t, evt) {
+                        editor.ui.getDom('savetip').style.cssText = "display:block";
+                        editor.ui.getDom('savetiptext').innerHTML = editor.getLang("autosave.saving");
+                    });
+                    editor.addListener('afterautosave', function (t, evt) {
+                        editor.ui.getDom('savetiptext').innerHTML = editor.getLang("autosave.success");
+                    });
+                }
                 //初始化提交按钮
                 if (editor.options.cancelButton) {
                     function onCancelBtnClick() {
@@ -111,6 +121,8 @@
                     editor.ui.getDom('submitbtn').style.display = "none";
                 } else if (!editor.options.cancelButton) {
                     editor.ui.getDom('cancelbtn').style.display = "none";
+                } else if (!editor.options.enableAutoSave) {
+                    editor.ui.getDom('savetip').style.display = "none";
                 }
 
                 if (!editor.selection.isFocus())return;
@@ -458,9 +470,15 @@
                 '</div>' +
                 '<div id="##_iframeholder" class="%%-iframeholder">' +
                 '</div>' +
-                //提交按钮
                 '<div id=##_bottomoptsbar class="%%-bottomsubmitContainer">' +
+                //草稿
+                '<div id=##_savetip class="%%-saveTipContainer" style="display:none;">' +
+                '<i id=##_deleteicon class="%%-deleteIcon"></i>' +
+                '<span id=##_savetiptext class="%%-saveTipText"></span>' +
+                '</div>' +
+                //提交按钮
                 '<div id="##_submitbtn" class="%%-submitbtn"></div>' +
+                //取消按钮
                 '<div id="##_cancelbtn" class="%%-cancelbtn"></div>' +
                 '</div>' +
                 //modify wdcount by matao

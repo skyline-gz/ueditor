@@ -113,15 +113,17 @@
 
         //,autoClearEmptyNode : true //getContent时，是否删除空的inlineElement节点（包括嵌套的情况）
 
-        //启用自动保存
-        //,enableAutoSave: true
+        //启用远端自动保存
+        ,enableAutoSave: true
         //自动保存间隔时间， 单位ms
-        //,saveInterval: 500
+        ,saveInterval: 5000
+        //自动保存的远端地址
+        ,autoSavePath:this.UEDITOR_HOME_URL+'auto-save.php'  //自动保存的地址
 
         //启用拖放上传
-        //,enableDragUpload: true
+        ,enableDragUpload: true
         //启用粘贴上传
-        //,enablePasteUpload: true
+        ,enablePasteUpload: true
 
         //启用图片拉伸缩放
         ,imageScaleEnabled: true

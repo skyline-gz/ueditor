@@ -4,9 +4,9 @@ UE.plugin.register('autosave', function (){
         //无限循环保护
         lastSaveTime = new Date(),
         //最小保存间隔时间
-        MIN_TIME = 20,
+        MIN_TIME = 20;
         //auto save key
-        saveKey = null;
+        //saveKey = null;
 
     function save ( editor ) {
 
@@ -34,12 +34,23 @@ UE.plugin.register('autosave', function (){
             return;
         }
 
-        me.setPreferences( saveKey, saveData );
-
-        editor.fireEvent( "afterautosave", {
-            content: saveData
-        } );
-
+        //这里使用远端作保存
+        //me.setPreferences( saveKey, saveData );
+        UE.ajax.request( me.getOpt('autoSavePath') , {
+            data: {
+                 content: saveData
+            },
+            onsuccess: function ( xhr ) {
+                editor.fireEvent( "afterautosave", {
+                    content: saveData
+                });
+             },
+            onerror: function ( xhr ) {
+                editor.fireEvent( "afterautosave", {
+                    content: saveData
+                });
+            }
+        });
     }
 
     return {
