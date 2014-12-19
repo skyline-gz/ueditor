@@ -104,7 +104,8 @@
     float: right;
     margin-top: 5px;
     margin-right: 12px;
-    width: 56px;
+    padding: 0 4px;
+    /*width: 56px;*/
     height: 26px;
     line-height: 26px;
     border-radius: 3px;
@@ -126,7 +127,8 @@
     float: right;
     margin-top: 5px;
     margin-right: 12px;
-    width: 56px;
+    padding: 0 4px;
+    /*width: 56px;*/
     height: 26px;
     line-height: 26px;
     border-radius: 3px;
